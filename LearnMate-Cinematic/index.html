@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17130f">
+  <title>LearnMate — Your learning, reimagined</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main id="loginScreen" class="login-screen">
+    <section class="login-visual">
+      <div class="visual-top"><span class="brand-mark">L</span><span class="brand-name">learnmate<span>.</span></span><span class="edition">THE LEARNING STUDIO</span></div>
+      <div class="visual-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A NEW WAY TO GROW</p>
+        <h1>Make room<br>for <em>brilliant</em><br>things.</h1>
+        <p class="visual-sub">A calmer space to learn deeply, build consistency, and become who you want to be.</p>
+      </div>
+      <div class="visual-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="art-sun"></div><div class="art-card card-back"></div>
+        <div class="art-card card-front"><span class="tiny-label">YOUR NEXT CHAPTER</span><strong>Curiosity<br>looks good<br>on you.</strong><span class="art-spark">✳</span></div>
+        <span class="floating-note note-one">01 — EXPLORE</span><span class="floating-note note-two">02 — PRACTICE</span>
+      </div>
+      <div class="visual-footer"><span>LEARN WITH INTENTION</span><span>EST. FOR YOUR POTENTIAL&nbsp; ✳</span></div>
+    </section>
+    <section class="login-panel">
+      <div class="mobile-brand"><span class="brand-mark">L</span><span class="brand-name">learnmate<span>.</span></span></div>
+      <div class="login-content">
+        <div class="welcome-tag"><span class="live-dot"></span> YOUR PERSONAL LEARNING SPACE</div>
+        <h2>Welcome<br>to your <em>next level.</em></h2>
+        <p class="login-intro">Sign in and pick up where your curiosity left off.</p>
+        <form id="loginForm">
+          <label for="userName">WHAT SHOULD WE CALL YOU?</label>
+          <div class="input-wrap"><span class="input-icon">✧</span><input id="userName" type="text" placeholder="Your name" autocomplete="name" required minlength="2"></div>
+          <label for="userEmail">EMAIL ADDRESS</label>
+          <div class="input-wrap"><span class="input-icon">＠</span><input id="userEmail" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+          <button class="enter-btn" type="submit"><span>Enter your studio</span><span class="btn-arrow">↗</span></button>
+        </form>
+        <div class="login-note"><span class="lock-icon">◇</span> Prototype access · Your progress stays in this browser</div>
+      </div>
+      <div class="panel-bottom"><span>Thoughtful learning. Real progress.</span><span>© LEARNMATE 2026</span></div>
+    </section>
+  </main>
+
+  <main id="appScreen" class="app-screen hidden">
+    <aside class="sidebar">
+      <a class="side-brand" href="#"><span class="brand-mark">L</span><span class="brand-name">learnmate<span>.</span></span></a>
+      <div class="side-caption">YOUR WORKSPACE</div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-page="overview"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-page="learning"><span>◈</span> My learning</button>
+        <button class="nav-item" data-page="quiz"><span>✳</span> Quiz studio</button>
+        <button class="nav-item" data-page="progress"><span>↗</span> My progress</button>
+      </nav>
+      <div class="sidebar-quote"><span class="quote-mark">“</span><p>Small steps every day add up to extraordinary things.</p><span class="quote-by">— JAMES CLEAR</span></div>
+      <div class="side-profile"><div class="avatar" id="sideAvatar">K</div><div><strong id="sideName">Learner</strong><small>Curious mind</small></div><button id="logoutBtn" title="Log out">↗</button></div>
+    </aside>
+    <section class="workspace">
+      <header class="topbar"><div><span class="date-kicker" id="todayDate">YOUR LEARNING SPACE</span><h2 id="pageHeading">A little progress, every day.</h2></div><div class="top-actions"><span class="streak-pill">✦ <b id="streakCount">1</b> day streak</span><div class="avatar small-avatar" id="topAvatar">K</div></div></header>
+      <div class="page-area">
+        <section class="page active-page" id="page-overview">
+          <div class="hero-card">
+            <div class="hero-copy"><span class="hero-kicker">MONDAY MOTIVATION · EVERY DAY</span><h1>Keep going,<br><em id="heroName">curious mind.</em></h1><p>Your future self is built by what you learn today. Let's make it count.</p><button class="cream-btn" data-go="learning">Continue learning <span>↗</span></button></div>
+            <div class="hero-graphic"><div class="graphic-ring ring-1"></div><div class="graphic-ring ring-2"></div><div class="graphic-core">✳</div><span class="graphic-label">GROW<br>AT YOUR<br>OWN PACE</span></div>
+            <span class="hero-index">01 / YOUR JOURNEY</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><span class="stat-icon lilac">◈</span><span class="stat-label">COURSES IN PROGRESS</span><strong id="statCourses">03</strong><small>Keep your momentum</small></article>
+            <article class="stat-card"><span class="stat-icon blue">✳</span><span class="stat-label">QUIZZES COMPLETED</span><strong id="statQuizzes">00</strong><small>Every question counts</small></article>
+            <article class="stat-card"><span class="stat-icon peach">↗</span><span class="stat-label">LEARNING HOURS</span><strong id="statHours">0.0<span>h</span></strong><small>Time invested in you</small></article>
+          </div>
+          <div class="content-grid">
+            <section class="content-card course-section"><div class="section-heading"><div><span class="section-kicker">PICK UP THE THREAD</span><h3>Continue learning</h3></div><button class="text-link" data-go="learning">View all ↗</button></div><div id="coursePreview" class="course-list"></div></section>
+            <section class="content-card recommendation"><div class="section-heading"><div><span class="section-kicker">A LITTLE NUDGE</span><h3>Made for your growth</h3></div><span class="sparkle">✧</span></div><div class="recommend-art">✳</div><span class="rec-tag">YOUR NEXT GOOD THING</span><h4 id="recommendTitle">Build a 20-minute study ritual</h4><p id="recommendText">A small, repeatable session can make learning feel effortless.</p><button class="text-link" data-go="learning">Explore your path ↗</button></section>
+          </div>
+        </section>
+        <section class="page" id="page-learning"><div class="page-intro"><span class="section-kicker">YOUR PERSONAL CURRICULUM</span><h2>Learn at your own rhythm.</h2><p>Choose a path, make it yours, and let the little wins add up.</p></div><div class="filter-row"><span>YOUR LEARNING PATHS</span><span class="course-count">03 CURATED PATHS</span></div><div id="allCourses" class="all-courses"></div></section>
+        <section class="page" id="page-quiz"><div class="page-intro"><span class="section-kicker">PRACTICE MAKES PROGRESS</span><h2>Welcome to the quiz studio.</h2><p>Pick a subject and take a quick knowledge check. Your score updates your progress.</p></div><div class="quiz-layout"><div class="quiz-setup content-card"><span class="section-kicker">01 — SET YOUR SESSION</span><h3>What shall we explore?</h3><label for="quizSubject">CHOOSE A SUBJECT</label><select id="quizSubject"><option value="javascript">JavaScript</option><option value="html">HTML & CSS</option><option value="general">Computer Science</option></select><div class="quiz-tip"><span>✧</span><p>Five quick questions. No pressure — this is a space to learn, not to be perfect.</p></div><button id="startQuiz" class="dark-btn">Create my quiz <span>↗</span></button></div><div class="quiz-stage content-card" id="quizStage"><div class="empty-quiz"><div class="empty-symbol">?</div><h3>Your next aha moment awaits.</h3><p>Choose a subject and start when you're ready.</p></div></div></div></section>
+        <section class="page" id="page-progress"><div class="page-intro"><span class="section-kicker">LOOK HOW FAR YOU'VE COME</span><h2>Progress looks good on you.</h2><p>Every session is a step forward. Here's your learning story so far.</p></div><div class="progress-grid"><div class="content-card progress-main"><span class="section-kicker">YOUR OVERALL MOMENTUM</span><div class="progress-number" id="overallPercent">0<small>%</small></div><p>Average course completion</p><div class="big-progress"><span id="overallBar"></span></div><div class="progress-legend"><span>Keep showing up</span><span id="progressCourseCount">0 / 3 paths</span></div></div><div class="content-card progress-quiz"><span class="section-kicker">QUIZ PERFORMANCE</span><strong id="quizScore">—</strong><p>Average quiz score</p><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small id="quizAttempts">Complete a quiz to see your stats.</small></div></div><div class="content-card progress-breakdown"><div class="section-heading"><div><span class="section-kicker">THE DETAILS</span><h3>Path by path</h3></div></div><div id="progressCourses"></div></div></section>
+      </div>
+      <footer class="app-footer"><span>LEARN WITH INTENTION <b>✳</b></span><span>MADE FOR THE CURIOUS.</span></footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
